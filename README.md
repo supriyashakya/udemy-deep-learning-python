@@ -1,2 +1,2 @@
-# udemy-python-machine-learning
-Udemy Course for Python Machine Learning: https://www.udemy.com/the-complete-python-course-for-machine-learning-engineers/learn/v4/overview
+# udemy-nlp-dp-python 
+Udemy Course for NLP DP Python: https://www.udemy.com/natural-language-processing-with-deep-learning-in-python/learn/v4/content.
