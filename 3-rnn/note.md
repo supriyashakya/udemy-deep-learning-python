@@ -10,7 +10,7 @@
       - Store each observation as a list in Python
       - The n-th element is $T(n) \times D$
 - A simple recurrent unit: <br>
-![alt text](/images/simple_recurrent_unit.png)
+![Alt Text](figures/simple_recurrent_unit.png)
 - How big is $W_h$?
   - It connects everything to everything
   - If there are $M$ hidden units on the layer, each recurrent unit will connect to all hidden units of the layer, thus the size of $W_h$ is $M \times M$
