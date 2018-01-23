@@ -23,3 +23,27 @@
   - $h(t) = f(W_h^T f(W_h^T h(t-2) + W_x^T x(t-1) + b_h) + W_x^T x(t) + b_h)$
   - ......
   - $h(0)=?$, some researcher set it as 0, it is a hyper-parameter
+- We can obviously have many recurrent units/layers and this depends on what model works the best.
+- In prediction:
+  - The original softmax is: $\argmax_k P(y=k|x) = \agmax_k softmax(W_o^T h(x) + b_o)$
+    - This assumes that there is no time component
+    - It also assumes that one class per one input, which makes sense for most of the problems, but not all.
+- Example 1: differentiate between male and female voices
+  - Adding the time component: $\argmax_k P(y(t)=k|x) = \agmax_k softmax(W_o^T h(x) + b_o)$
+    - It is possible to have one $y(t)$ for each $h(t)$ (time step)
+- Example 2: brain-computer interaction
+  - use EEG to control wheelchair
+  - we want fine-control of the wheelchair, that is, do the action as we think of it, thus we will need y(t) for each x(t)
+- Example 3: word sequences
+  - predict next word given all previous words (target is next word)
+  - unsupervised
+  - $p(x(t) | x(t-1), \cdots, x(1))$
+  - Consider the whole sequence, we have:
+    - $P(x(1)) P(x(2)|x(1)) P(x(3)|x(2),x(1)) \cdots$
+    - Using chain rule of probability, this is essentially the joint probability of the whole sequence
+- Intuitively, the RNN is trying to optimize the joint probability, which is the same as HMM, and without the assumption of Markov property.
+- Moreover, in HMM, longer sequences have probabilities that approach 0, but we do not need to calculate it here in RNN.
+- In summary, RNN can:
+  1. predict one label over entire sequence
+  2. predict a label for each step of input sequence
+  3. predict the next value in sequence
