@@ -1,5 +1,4 @@
-# udemy-nlp-dp-python
-Udemy Course for Python Deep Learning
+### Udemy Course for Python Deep Learning
 
 Series:
 1. [-] Deep Learning Prerequisites: Linear Regression in Python: https://www.udemy.com/data-science-linear-regression-in-python/
