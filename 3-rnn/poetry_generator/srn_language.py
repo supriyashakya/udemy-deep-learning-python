@@ -230,14 +230,6 @@ def generate_poetry():
 	rnn.generate(pi, word2idx)
 
 
-def wikipedia():
-	sentences, word2idx = get_wikipedia_data()
-	print("finished retrieving data")
-	print("vocab size:", len(word2idx), "number of sentences:", len(sentences))
-	rnn = SimpleRNN(20, 15, len(word2idx))
-	rnn.fit(sentences, learning_rate=1e-4, show_fig=True, activation=T.nnet.relu)
-
-
 if __name__ == '__main__':
 	train_poetry()
 	generate_poetry()
