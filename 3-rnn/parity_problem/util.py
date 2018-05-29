@@ -1,9 +1,4 @@
 import numpy as np
-import string
-import os
-import operator
-
-from nltk import pos_tag, word_tokenize
 
 
 def init_weight(Mi, Mo):
@@ -28,9 +23,3 @@ def all_parity_pairs(nbit):
                 X[ii,j] = 1
         Y[ii] = X[ii].sum() % 2
     return X, Y
-
-
-def remove_punctuation(s):
-	return s.translate(None, string.punctuation)
-
-
