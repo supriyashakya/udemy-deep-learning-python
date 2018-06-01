@@ -47,3 +47,12 @@
   1. predict one label over entire sequence
   2. predict a label for each step of input sequence
   3. predict the next value in sequence
+- DIfferent recurrent units:
+  1. Simple recurrent unit
+![Alt Text](figures/SRU_architecture.png)
+  2. Rates recurrent unit
+![Alt Text](figures/RRU_architecture.png)
+  3. Gate recurrent unit
+![Alt Text](figures/GRU_architecture.png)
+  4. Long short term meomry (LSTM) recurrent unit
+![Alt Text](figures/LSTM_architecture.png)
